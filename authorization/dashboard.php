@@ -31,6 +31,7 @@ require_once('db_config.php');
   } else {
    echo "<p>Данные о пользователе не найдены</p>";
    header("Location: messages.php?message=Данные о пользователе не найдены&color=red&color_form=white&title=Данные о пользователе не найдены");
+   echo "<script>window.location.href = \"messages.php?message=Данные о пользователе не найдены&color=red&color_form=white&title=Данные о пользователе не найдены\";</script>";
   }
   
   mysqli_close($link);
