@@ -88,7 +88,8 @@ if (isset($_GET['register'])) {
 
         
         echo '<title>' . $translations['Finish register'] . ' - ParadiseRP</title>';
-echo '<form action="reg.php?register=true&check_skin=true&ALARM=PLEASE-DONT-CHANGE-URL-BECAUSE-REGISTER-PROCESS-CRASH" method="POST">
+        
+echo '<form action="reg.php?register=true&check_skin=true" method="POST">
 ' . $egh .
 '<h2>' . $translations['Enter your nickname from Minecraft'] . '</h2>
 <input type="text1" name="nick" required></input>
@@ -101,7 +102,20 @@ echo '<form action="reg.php?register=true&check_skin=true&ALARM=PLEASE-DONT-CHAN
         $nickname = $_POST['nick'];
         session_start();
         $_SESSION['minecraft_nickname'] = $nickname;
-        setcookie("minecraft_nickname", $nickname, time()+100000);
+		echo <<<JS
+<script>
+var name = "minecraft_nickname";
+var text = "{$nickname}";
+var time = 10000; // время в секундах
+
+var date = new Date();
+date.setTime(date.getTime() + (time * 1000 * 1000)); // умножаем на 1000 для преобразования в миллисекунды
+var expires = "expires=" + date.toUTCString();
+
+document.cookie = name + "=" + text + ";" + expires + ";path=/";
+</script>
+JS;
+        setcookie("minecraft_nickname", $nickname, time()+10000);
 
         if (!isset($_POST['NOT_NICK'])) {
 $url = 'https://api.mojang.com/users/profiles/minecraft/' . $nickname;
@@ -132,7 +146,20 @@ if ($response) {
     
     // Получаем UUID игрока
     $uuid = getUUID($nickname);
-    setcookie("minecraft_UUID", $uuid, time()+100000);
+			echo <<<JS
+<script>
+var name = "minecraft_UUID";
+var text = "{$uuid}";
+var time = 10000; // время в секундах
+
+var date = new Date();
+date.setTime(date.getTime() + (time * 1000 * 1000)); // умножаем на 1000 для преобразования в миллисекунды
+var expires = "expires=" + date.toUTCString();
+
+document.cookie = name + "=" + text + ";" + expires + ";path=/";
+</script>
+JS;
+    setcookie("minecraft_UUID", $uuid, time()+10000);
     
     // Сохраняем голову в файл
     $filename = "heads/" . $nickname . ".png";
@@ -171,6 +198,19 @@ if ($response) {
     
     // Получаем UUID игрока
     $uuid = getUUID($nickname);
+	echo <<<JS
+<script>
+var name = "minecraft_UUID";
+var text = "{$uuid}";
+var time = 10000; // время в секундах
+
+var date = new Date();
+date.setTime(date.getTime() + (time * 1000 * 1000)); // умножаем на 1000 для преобразования в миллисекунды
+var expires = "expires=" + date.toUTCString();
+
+document.cookie = name + "=" + text + ";" + expires + ";path=/";
+</script>
+JS;
     setcookie("minecraft_UUID", $uuid, time()+100000);
     
     // Сохраняем голову в файл
@@ -219,6 +259,19 @@ if ($response) {
     
     // Получаем UUID игрока
     $uuid = getUUID($nickname);
+	echo <<<JS
+<script>
+var name = "minecraft_UUID";
+var text = "{$uuid}";
+var time = 10000; // время в секундах
+
+var date = new Date();
+date.setTime(date.getTime() + (time * 1000 * 1000)); // умножаем на 1000 для преобразования в миллисекунды
+var expires = "expires=" + date.toUTCString();
+
+document.cookie = name + "=" + text + ";" + expires + ";path=/";
+</script>
+JS;
     setcookie("minecraft_UUID", $uuid, time()+100000);
     
     // Сохраняем голову в файл
@@ -231,15 +284,18 @@ if ($response) {
   } else {
     echo $data;
     header("Location: reg?register=true&sn=true&egh=true&error=$data");
+	echo "<script>window.location.href = \"reg?register=true&sn=true&egh=true&error=$data\";</script>";
   }
 } else {
     echo $data;
     header("Location: reg?register=true&sn=true&egh=true&error=$data");
+	echo "<script>window.location.href = \"reg?register=true&sn=true&egh=true&error=$data\";</script>";
 }
 }
 
     } else {
         header("Location: reg?register=true&sucssecsful_register=true");
+		echo "<script>window.location.href = \"reg?register=true&sn=true&egh=true&error=$data\";</script>";
     }
 } 
 // 
@@ -306,14 +362,71 @@ $level_admin = "0";
     setcookie("code_pre_reg", "", time()-3600);
     setcookie("minecraft_UUID", "", time()-100000);
     
-    setcookie("referal_pre_reg", "", time()-6600);
-    setcookie("email_pre_reg", "", time()-3600);
-    setcookie("login_pre_reg", "", time()-3600);
-    setcookie("first_name_pre_reg", "", time()-3600);
-    setcookie("last_name_pre_reg", "", time()-3600);
-    setcookie("password_pre_reg", "", time()-3600);
-    setcookie("code_pre_reg", "", time()-3600);
-    setcookie("minecraft_UUID", "", time()-100000);
+    echo <<<JS
+<script>
+var name = "minecraft_UUID";
+var text = "";
+var time = -100000; // время в секундах
+
+var date = new Date();
+date.setTime(date.getTime() + (-100000000000)); // умножаем на 1000 для преобразования в миллисекунды
+var expires = "expires=" + date.toUTCString();
+
+document.cookie = name + "=" + text + ";" + expires + ";path=/";
+</script>
+JS;
+    echo <<<JS
+<script>
+var name = "code_pre_reg";
+var text = "";
+var time = -3600; // время в секундах
+
+var date = new Date();
+date.setTime(date.getTime() + (time * 1000 * 1000)); // умножаем на 1000 для преобразования в миллисекунды
+var expires = "expires=" + date.toUTCString();
+
+document.cookie = name + "=" + text + ";" + expires + ";path=/";
+</script>
+JS;
+echo <<<JS
+<script>
+var name = "password_pre_reg";
+var text = "";
+var time = -3600; // время в секундах
+
+var date = new Date();
+date.setTime(date.getTime() + (-3600000000)); // умножаем на 1000 для преобразования в миллисекунды
+var expires = "expires=" + date.toUTCString();
+
+document.cookie = name + "=" + text + ";" + expires + ";path=/";
+</script>
+JS;
+echo <<<JS
+<script>
+var name = "last_name_pre_reg";
+var text = "";
+var time = -100000; // время в секундах
+
+var date = new Date();
+date.setTime(date.getTime() + (-3600000000)); // умножаем на 1000 для преобразования в миллисекунды
+var expires = "expires=" + date.toUTCString();
+
+document.cookie = name + "=" + text + ";" + expires + ";path=/";
+</script>
+JS;
+echo <<<JS
+<script>
+var name = "first_name_pre_reg";
+var text = "";
+var time = -100000; // время в секундах
+
+var date = new Date();
+date.setTime(date.getTime() + (-3600000000)); // умножаем на 1000 для преобразования в миллисекунды
+var expires = "expires=" + date.toUTCString();
+
+document.cookie = name + "=" + text + ";" + expires + ";path=/";
+</script>
+JS;
 
     echo "<script>window.location.href = \"reg.php?sur=true&username=$username\";</script>";
         // header("Location: reg?sur=true&username=$username");
