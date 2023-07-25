@@ -1,0 +1,11 @@
+Theme-Path=light
+body-backround="linear-gradient(to bottom right, #3498db, #2c3e50)"
+form-background="linear-gradient(to bottom right, #d6d6d6d2, #ffffffd2)"
+h2-color="#2c3e50"
+h3-color="grey"
+p-color="#2c3e50"
+input-type-text-border="1px solid #CCCCCC"
+input-type-text-backround="#f2f2f2"
+placeholder-color="grey"
+input-submit-hover=#3498db
+input-submit-backroud=#273748

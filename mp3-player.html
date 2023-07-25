@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.audio-container {
+  width: 300px;
+  height: 50px;
+  background-color: #eaeaea;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+#audio-player {
+  width: 100%;
+}
+
+.button {
+  padding: 10px;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.button:hover {
+  background-color: #ddd;
+}
+
+.play-button {
+  background-color: #4385f5;
+  color: #fff;
+}
+
+.play-button:hover {
+  background-color: #346edc;
+}
+
+.pause-button {
+  background-color: #fbb000;
+  color: #fff;
+}
+
+.pause-button:hover {
+  background-color: #e1a100;
+}
+</style>
+</head>
+<body>
+    <script src="https://yastatic.net/share2/share.js"></script>
+<div class="ya-share2" data-curtain data-shape="round" data-limit="3" data-services="messenger,vkontakte,odnoklassniki,telegram,viber,whatsapp"></div>
+<div class="audio-container">
+  <div id="audio-player"></div>
+</div>
+
+<script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script src="https://yastatic.net/share2/share.js"></script>
+<script src="https://cdn.rawgit.com/yandex/audio-js/gh-pages/dist/audio.min.js"></script>
+
+<script>
+var audio = new Audio();
+audio.src = '/cadilac.mp3';
+
+var player = new AudioPlayer({
+  element: document.getElementById('audio-player'),
+  cssNamespace: 'audio-player',
+  track: audio
+});
+
+player.init();
+</script>
+</body>
+</html>

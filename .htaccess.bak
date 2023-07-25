@@ -1,0 +1,24 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(\w{2})/(.*)$ $2?lang=$1 [L,QSA]
+
+RewriteRule ^(\w{2})/register.php$ register.php?lang=$1 [L]
+RewriteRule ^login$ login.php [L]
+RewriteRule ^login/([0-9a-zA-Z_-]+)$ login.php?id=$1 [L]
+RewriteRule ^register$ register.php [L]
+RewriteRule ^register/([0-9a-zA-Z_-]+)$ register.php?id=$1 [L]
+RewriteRule ^reset_password$ reset_password.php [L]
+RewriteRule ^reset_password/([0-9a-zA-Z_-]+)$ reset_password.php?id=$1 [L]
+RewriteRule ^pre_login$ pre_login.php [L]
+RewriteRule ^pre_login/([0-9a-zA-Z_-]+)$ pre_login.php?id=$1 [L]
+RewriteRule ^app_info$ app_info.php [L]
+RewriteRule ^app_info/([0-9a-zA-Z_-]+)$ app_info.php?id=$1 [L]
+RewriteRule ^reshetka$ reshetka.php [L]
+RewriteRule ^reshetka/([0-9a-zA-Z_-]+)$ reshetka.php?id=$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* - [env=REQUEST_URI:%{REQUEST_URI}]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-d
+RewriteRule ^(.*)$ ../errors/404_space_1.php?url=http://%{HTTP_HOST}%{ENV:REQUEST_URI} [L,QSA]

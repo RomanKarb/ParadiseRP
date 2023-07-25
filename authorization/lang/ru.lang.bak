@@ -1,0 +1,66 @@
+Test Language=Тест Языка
+Current_INI_Lang=ru
+
+[Pages]
+therefore, try restarting the browser, then register again=поэтому попробуйте перезапустить браузер, затем зарегистрируйтесь снова
+
+[Login]
+login=Войти
+Username, email=Логин, почта
+Password=Пароль
+Forgot password=Забыли пароль
+Log in=Вход
+
+[Register]
+Registration=Регистрация
+You join:=Вас пригласил:
+Username=Логин
+Enter username=Введите логин без символов: <,>,',?,#,&,@,ПРОБЕЛ
+Email=Почта
+Enter email=Введите почту
+First name=Имя
+Enter first name=Введите имя
+Last name=Фамилия
+Enter last name=Введите фамилию
+Password=Пароль
+Enter password=Введите пароль
+Confirm password=Повторите пароль
+Passwords do not match=Пароли не совпадают
+Not registered yet?=Ещё не зарегистрированы?
+Finish register=Завершение регистрации
+Already registered?=Уже зарегистрированы?
+
+Check register=Проверка регистрации
+Enter the code from the email=Введите код из письма
+Confirm=Подтвердить
+
+Enter your nickname from Minecraft=Введите свой никнейм из Minecraft
+Check=Проверить
+Continue without checking=Продолжить без проверки
+: Player not found=: не найден, можете повторить
+You are successfully registered, the transition will take place in=Вы успешно зарегистрированы, переход произойдет через
+seconds=секунды
+Redirection...=Переадресация...
+
+
+[Res Pass 1]
+Password recovery=Восстановление пароля
+Email address used during registration:=Укажите Email, использованный при регистрации:
+Recover password=Восстановить пароль
+
+[Api\Roauth\V1]
+Authorization in the application=Авторизация в приложении
+For the application:=Приложению:
+access will be granted to:=будет предоставлен доступ к:
+Open data about=Открыть данные о
+Domain name=Доменное имя
+
+Information about the application=Информация о приложении
+Application name:=Название приложения:
+Author of the application:=Автор приложения:
+Author email:=Mail автора:
+Description:=Описание:
+Domain name:=Домен:
+Author website:=Сайт:
+Open profile:=Открыть профиль:
+Write:=Написать:

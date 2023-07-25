@@ -1,0 +1,30 @@
+<?php
+session_start();
+if (isset($_POST['confirm'])) {
+    // проверяем код
+    if ($_POST['code'] != $_SESSION['code']) {
+        echo "Неверный код";
+        die();
+    }
+
+// подключаем файл с настройками базы данных
+require_once('db_config.php');
+
+    $login = $_SESSION['login'];
+    $email = $_SESSION['email'];
+    $first_name = $_SESSION['first_name'];
+    $last_name = $_SESSION['last_name'];
+    $password = $_SESSION['password'];
+	
+	$reset_key = uniqid();
+
+$sql = "INSERT INTO users (username, email, f_name, s_name, password, reset_key) VALUES (?, ?, ?, ?, ?, ?)";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("ssssss", $username, $email, $f_name, $s_name, $password, $reset_key);
+$stmt->execute();
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Регистрация прошла успешно";
+    } else {
+        echo "Ошибка: " . $sql . "
+" . $conn->error;}}

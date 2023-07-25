@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteRule ^web_app$ web_app.php [L]
+RewriteRule ^web_app/([0-9a-zA-Z_-]+)$ web_app.php?id=$1 [L]
+RewriteRule ^app_info$ app_info.php [L]
+RewriteRule ^app_info/([0-9a-zA-Z_-]+)$ app_info.php?id=$1 [L]
+RewriteRule ^check$ check.php [L]
+RewriteRule ^check/([0-9a-zA-Z_-]+)$ check.php?id=$1 [L]

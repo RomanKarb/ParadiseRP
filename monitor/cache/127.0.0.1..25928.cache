@@ -1,0 +1,13 @@
+<?php
+$asdddd = '<div class="server-info-holder" style="width:300px">
+	<div class="server-info-name" style="width:px"></div>
+	<div class="server-info-state" style="width:280px">
+		<div class=greenbar style="width:280px">
+			<div class="progressbar_meter" style="width:0%">0/3</div>	
+		</div>	
+	</div>
+ </div>
+</div>
+</body>
+</html>'
+?>

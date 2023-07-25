@@ -1,0 +1,15 @@
+<?php
+$asdddd = '<div class="server-info-holder" style="width:220px">
+	<div class="server-info-name" style="width:px"></div>
+	<div class="server-info-state" style="width:200px">
+		<div class=greenbar style="width:200px">
+			<div class="progressbar_meter" style="width:86%">
+			by_a1mpLe SandBox - 86/100
+			</div>	
+		</div>	
+	</div>
+ </div>
+</div>
+</body>
+</html>'
+?>

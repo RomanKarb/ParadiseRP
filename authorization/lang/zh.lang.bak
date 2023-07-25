@@ -1,0 +1,49 @@
+Test Language=测试语言
+Current_INI_Lang=ru
+[Login]
+login=登录
+Username, email=用户名，电子邮件
+Password=密码
+Forgot password=忘记密码
+Log in=登录
+
+[Register]
+Registration=注册
+Username=用户名
+Enter username=请输入用户名
+Email=电子邮件
+Enter email=请输入电子邮件
+First name=名字
+Enter first name=请输入名字
+Last name=姓氏
+Enter last name=请输入姓氏
+Password=密码
+Enter password=请输入密码
+Confirm password=确认密码
+Passwords do not match=密码不一致
+
+Check register=检查注册
+Enter the code from the email=输入邮件中的代码
+Confirm=确认
+
+[Res Pass 1]
+Password recovery=密码恢复
+Email address used during registration:=在注册期间使用的电子邮件地址：
+Recover password=恢复密码
+
+[Api\Roauth\V1]
+Authorization in the application=在应用程序中授权
+For the application:=对于应用程序：
+access will be granted to:=将授予访问权限以：
+Open data about=打开有关的资料
+Domain name=域名
+
+Information about the application=应用程序信息
+Application name:=应用程序名称：
+Author of the application:=应用程序作者：
+Author email:=应用程序作者的电子邮件：
+Description:=说明：
+Domain name:=域名：
+Author website:=作者网站：
+Open profile:=打开资料：
+Write:=写

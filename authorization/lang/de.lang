@@ -1,0 +1,50 @@
+Test Language=Testsprache
+Current_INI_Lang=ru
+[Login]
+login=Anmelden
+Username, email=Nutzername, E-Mail
+Password=Passwort
+Forgot password=Passwort vergessen
+Log in=Anmelden
+
+[Register]
+Registration=Registrierung
+You join:=Ich habe Sie eingeladen:
+Username=Nutzername
+Enter username=Nutzername eingeben
+Email=E-Mail
+Enter email=E-Mail-Adresse eingeben
+First name=Vorname
+Enter first name=Vorname eingeben
+Last name=Nachname
+Enter last name=Nachname eingeben
+Password=Passwort
+Enter password=Passwort eingeben
+Confirm password=Passwort bestätigen
+Passwords do not match=Passwörter stimmen nicht überein
+
+Check register=Registrierung prüfen
+Enter the code from the email=Code aus E-Mail eingeben
+Confirm=Bestätigen
+
+[Res Pass 1]
+Password recovery=Passwortwiederherstellung
+Email address used during registration:=E-Mail-Adresse bei der Registrierung verwendet:
+Recover password=Passwort wiederherstellen
+
+[Api\Roauth\V1]
+Authorization in the application=Autorisierung in der Anwendung
+For the application:=Für die Anwendung:
+access will be granted to:=Zugriff wird gewährt auf:
+Open data about=Daten öffnen über
+Domain name=Domainname
+
+Information about the application=Informationen zur Anwendung
+Application name:=Name der Anwendung:
+Author of the application:=Autor der Anwendung:
+Author email:=E-Mail-Adresse des Autors:
+Description:=Beschreibung:
+Domain name:=Domainname:
+Author website:=Website des Autors:
+Open profile=Profil öffnen:
+Write=Schreiben:

@@ -1,0 +1,13 @@
+<?php 
+session_start();
+if(isset($_SESSION['login']) && isset($_SESSION['password'])) {
+    $redirect_url = $_GET['redirect_url'];
+    $login = $_SESSION['login'];
+    $password = $_SESSION['password'];
+echo $redirect_url;
+}
+else {
+    $redirect_url = urlencode($_GET['redirect_url']);
+    header("Location: http://base.roservers.com/authorization/login.php?redirect_url=$redirect_url");
+}
+?>

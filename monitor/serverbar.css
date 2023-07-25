@@ -1,0 +1,73 @@
+body {
+font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+}
+div .greenbar 
+{
+border: 1px solid #c2c2c2; 
+background-color: #adadad;
+width: 250px;
+}
+div .greenbar  div
+{
+background: url('work.png') 0px 0px repeat;
+}
+div .full  div
+{
+background: url('full.png') 0px 0px repeat;
+}
+div .redbar 
+{
+border: 1px solid #c2c2c2;  
+background-color: #646464;
+width: 200px;
+}
+div .redbar div
+{
+background: url('error.png') 0px 0px repeat;
+}
+div .progressbar_meter
+{
+height: 20px;
+text-align: center;
+font-size: 11px;
+font-weight: bold; 
+color: #fff;
+width: 200px;
+line-height: 20px; 
+text-shadow: 0px 0px 3px #000;
+text-indent: 2px;
+white-space: nowrap;
+}
+div .progressbar_overlay
+{
+text-align: center;
+font-size: 11px;
+font-weight: bold;
+width: 200px;
+color: #fff; 
+line-height: 20px; 
+text-shadow: 0px 0px 3px #000;
+margin-top: 1px;
+float:left; 
+display: block; 
+width: 100%;
+}
+div .progressbar_overlay_top
+{
+background: #373737;
+display:inline-block;
+font: 12px Calibri;
+border-top: 1px solid #484848; 
+border-left: 2px solid #484848; 
+border-right: 2px solid #484848; 
+min-height: 15px;
+font-size: 11px;
+font-weight: bold; 
+color: #fff; 
+padding: 4px;
+}
+.server-info-state 
+{
+width: 200px;
+margin: 0 auto;
+}

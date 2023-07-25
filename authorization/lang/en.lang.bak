@@ -1,0 +1,66 @@
+Test Language=Test Language
+Current_INI_Lang=en
+
+[Pages]
+therefore, try restarting the browser, then register again=therefore, try restarting the browser, then register again
+
+[Login]
+login=Log in
+Username, email=Username, email
+Password=Password
+Forgot password=Forgot password
+Log in=Log in
+
+[Register]
+Registration=Registration
+You join:=Invited you:
+Username=Username
+Enter username=Enter username without characters: <,>,',?,#,&,@,SPACE
+Email=Email
+Enter email=Enter email
+First name=First name
+Enter first name=Enter first name
+Last name=Last name
+Enter last name=Enter last name
+Password=Password
+Enter password=Enter password
+Confirm password=Confirm password
+Passwords do not match=Passwords do not match
+Not registered yet?=Not registered yet?
+Finish register=Finish register
+Already registered?=Already registered?
+
+Check register=Check register
+Enter the code from the email=Enter the code from the email
+Confirm=Confirm
+
+Enter your nickname from Minecraft=Enter your nickname from Minecraft
+Check=Check
+Continue without checking=Continue without checking
+: Player not found=: not found, you can repeat
+You are successfully registered, the transition will take place in=You are successfully registered, the transition will take place in
+seconds=seconds
+Redirection...=Redirection...
+
+
+[Res Pass 1]
+Password recovery=Password recovery
+Email address used during registration:=Email address used during registration:
+Recover password=Recover password
+
+[Api\Roauth\V1]
+Authorization in the application=Authorization in the application
+For the application:=For the application:
+access will be granted to:=access will be granted to:
+Open data about=Open data about
+Domain name=Domain name
+
+Information about the application=Information about the application
+Application name:=Application name:
+Author of the application:=Author of the application:
+Author email:=Author email:
+Description:=Description:
+Domain name:=Domain name:
+Author website:=Author website:
+Open profile:=Open profile:
+Write:=Write:

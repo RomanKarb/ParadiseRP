@@ -1,0 +1,6 @@
+<?php
+$lang = array(
+    'login' => 'Log in',
+    'register' => 'Register'
+);
+?>

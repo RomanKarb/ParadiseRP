@@ -1,0 +1,41 @@
+<?php
+// Обработка входа через Яндекс ID
+if(isset($_GET['code'])) {
+    // Получение кода авторизации из параметров запроса
+    $authorizationCode = $_GET['code'];
+
+    // Формирование параметров для запроса токена
+    $clientId = 'ae43a399109e4957a3c6fa129a67c561';
+    $clientSecret = '66474b61b09f446c87dc1a903cf3d122';
+    $redirectUri = 'http://www.izuminka.com/authorization/yandex/auth.php';
+    
+    // Формирование URL для запроса токена
+    $tokenUrl = 'https://oauth.yandex.ru/token';
+    $tokenParams = http_build_query([
+        'grant_type' => 'authorization_code',
+        'code' => $authorizationCode,
+        'client_id' => $clientId,
+        'client_secret' => $clientSecret,
+        'redirect_uri' => $redirectUri
+    ]);
+    
+    // Отправка запроса на получение токена
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $tokenUrl);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $tokenParams);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $tokenResponse = curl_exec($ch);
+    curl_close($ch);
+
+    // Обработка ответа с токеном
+    $tokenData = json_decode($tokenResponse, true);
+    $accessToken = $tokenData['access_token'];
+
+    // Дополнительные действия по авторизации или регистрации пользователя
+    
+    // Редирект на страницу после входа
+    header("Location: http://www.izuminka.com/authorization/yandex/login.php");
+    exit;
+}
+?>
