@@ -35,10 +35,10 @@ if(isset($_GET['clear_sessions'])) {
     }
     session_start();
     unset($_SESSION['login_log_roshkam']);
-    setcookie("username_log_roshkam", $row['username'], time()-432000, '/');
-    setcookie("id_log_roshkam", $row['id'], time()-432000, '/');
-    setcookie("login_log_roshkam", $username, time()-432000, '/');
-    setcookie("password_log_roshkam", $password, time()-432000, '/');
+    setcookie("username_log_roshkam", "", time()-432000, '/');
+    setcookie("id_log_roshkam", "", time()-432000, '/');
+    setcookie("login_log_roshkam", "", time()-432000, '/');
+    setcookie("password_log_roshkam", "", time()-432000, '/');
     unset($_SESSION['password_log_roshkam']);
 	header("Location: login.php$redirect_url"); 
 
